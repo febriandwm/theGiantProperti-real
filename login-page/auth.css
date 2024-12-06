@@ -1,0 +1,101 @@
+/* Reset gaya default */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('Gallery\ of\ SkyVille\ @\ Dawson\ _\ WOHA\ \ -\ 7.jpg'); 
+    background-position-y: -200px;
+    background-attachment: fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    
+}
+    
+/* Kontainer form login dan register */
+.auth-container {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    background: #e9f6f8;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+/* Tombol toggle form */
+.form-toggle {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.form-toggle button {
+    width: 50%;
+    padding: 10px;
+    background-color: #e0e0e0;
+    border: none;
+    cursor: pointer;
+}
+
+.form-toggle button.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.form-section {
+    display: none;
+}
+
+.form-section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #4CAF50;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    font-size: 14px;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.btn-auth {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-auth:hover {
+    background-color: #45a049;
+}
+
+/* Form yang aktif */
+.form-section:not(.hidden) {
+    display: block;
+}
+
+/* Sembunyikan form register saat pertama kali */
+.hidden {
+    display: none;
+}

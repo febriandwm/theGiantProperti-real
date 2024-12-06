@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Giant Property</title>
+  <link rel="stylesheet" href="setting.css">
+</head>
+
+<body>
+  <div class="container">
+    <aside class="sidebar">
+      <h1 class="title">The Giant Property</h1><br><br><br>
+
+      <nav>
+          <button onclick="navigateTo('../login-page/auth.html')">Account</button></a>
+      </nav>
+      <nav><br>
+          <button onclick="navigateTo('../index.html')">Home</button></a>
+      </nav>
+      <nav><br>
+          <button onclick="navigateTo('setting.html')">Setting</button></a>
+      </nav>
+      <nav><br>
+          <button onclick="navigateTo('index.html')">Notification</button></a>
+      </nav>
+      <nav><br>
+        <button onclick="navigateTo('../faqs-page/faq.html')">FAQ</button>
+    </nav>
+  </aside>
+    <main class="main-content">
+      <header class="header">
+        <div class="header-profile">
+          <div class="profile-icon"></div>
+          <div>
+            <h2>Setting</h2>
+            <p>account10@gmail.com</p>
+          </div>
+        </div>
+        <button class="logout-btn">Log Out</button>
+      </header>
+
+      <!-- Settings Form -->
+      <section class="settings-form">
+        <form>
+          <div class="form-group">
+            <label for="first-name">First Name</label>
+            <input type="text" id="first-name" placeholder="First Name">
+          </div>
+          <div class="form-group">
+            <label for="last-name">Last Name</label>
+            <input type="text" id="last-name" placeholder="Last Name">
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" placeholder="Password">
+          </div>
+          <div class="form-group">
+            <label for="about">About Me</label>
+            <textarea id="about" placeholder="Write something about yourself"></textarea>
+          </div>
+          <div class="form-actions">
+            <button type="button" class="cancel-btn">Cancel</button>
+            <button type="submit" class="save-btn">Save</button>
+          </div>
+        </form>
+      </section>
+    </main>
+  </div>
+<script src="setting.js"></script>
+</body>
+
+</html>
