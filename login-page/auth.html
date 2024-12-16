@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Login & Register - Properti Impian</title>
+<title>Login & Register</title>
 <link rel="stylesheet" href="auth.css">
 </head>
 <body>
@@ -39,8 +39,16 @@
                     <label for="registerPassword">Password</label>
                     <input type="password" id="registerPassword" placeholder="Buat Password" required>
                 </div>
+                <div class="input-group">
+                    <label for="privilege">Privilege</label>
+                    <div>
+                        <label><input type="radio" name="privilege" value="user" checked> User</label>
+                        <label><input type="radio" name="privilege" value="admin"> Admin</label>
+                    </div>
+                </div>
                 <button type="submit" class="btn-auth">Register</button>
             </form>
+            
         </div>
     </div>
 <script src="script.js"></script>

@@ -25,10 +25,11 @@ registerForm.addEventListener('submit', function(event) {
     
     const username = document.getElementById('registerUsername').value;
     const password = document.getElementById('registerPassword').value;
+    const privilege = document.querySelector('input[name="privilege"]:checked').value; // Get selected privilege
 
     // Simpan data ke localStorage
-    localStorage.setItem('username', username);
-    localStorage.setItem('password', password);
+    const userData = { username, password, privilege }; // Create user object
+    localStorage.setItem('userData', JSON.stringify(userData)); // Save as a string
 
     alert('Registrasi Berhasil! Silakan Login.');
     loginForm.classList.remove('hidden');
@@ -43,12 +44,15 @@ loginForm.addEventListener('submit', function(event) {
     
     const username = document.getElementById('loginUsername').value;
     const password = document.getElementById('loginPassword').value;
-    const storedUsername = localStorage.getItem('username');
-    const storedPassword = localStorage.getItem('password');
+    const storedUserData = JSON.parse(localStorage.getItem('userData')); // Retrieve stored user data
 
-    if (username === storedUsername && password === storedPassword) {
-        alert('Login Berhasil!');
-        window.location.href = 'index.html'; // Arahkan ke halaman utama setelah login
+    if (storedUserData && username === storedUserData.username && password === storedUserData.password) {
+        alert(`Login Berhasil sebagai ${storedUserData.privilege}!`);
+        if (storedUserData.privilege === 'admin') {
+            window.location.href = '../dashboard-page/admin.html'; // Redirect admin
+        } else {
+            window.location.href = 'index.html'; // Redirect user
+        }
     } else {
         alert('Username atau Password salah!');
     }

@@ -8,26 +8,27 @@
 body, html {
     height: 100%;
     font-family: Arial, sans-serif;
-    margin: 0;
-    overflow-y: auto;
+    margin: 0; 
+
 }
 
 .container {
     display: flex;
     height: auto;
-    background-color: #f5f7fa;
+    background-color: #ebf2fa;
+    overflow-y: auto;
 }
 
 /* Sidebar */
 .sidebar {
     width: auto;
-    background-color: #f2f0fc;
+    background-color: #004e64;
     padding: 20px;
 }
 
 .title {
-    color: #2f4858;
-    font-size: 1.5em;
+    color: #d9dcd6;
+    font-size: 1.4em;
     margin-bottom: 20px;
 }
 
@@ -35,7 +36,7 @@ button {
     width: 100px;
     height: 35px;
     background-color: #ffffff;
-    color: #665599;
+    color: #16425b;
     padding-inline: 10px 200px;
     font-size: 16px;
     border: none;
@@ -45,11 +46,11 @@ button {
 }
 
 button:hover {
-    background-color: #c19ee0;
+    background-color: #ebf2fa;
 }
 
 button:active {
-    background-color: #dec9e9; 
+    background-color: #e1e5f2; 
     transform: scale(0.98);    
 }
 
@@ -69,14 +70,14 @@ a button {
     font-size: 1em;
     border: none;
     border-radius: 5px;
-    background-color: #f0f2f5;
-    color: #999;
+    background-color: #ffffff;
+    color: #2c2a2a;
     margin-bottom: 20px;
 }
 
 h2 {
     font-size: 1.5em;
-    color: #4a4a4a;
+    color: #004e64;
     margin-bottom: 20px;
 }
 
@@ -128,7 +129,7 @@ h2 {
 .faq {
     padding: 40px; /* Increased padding for more breathing space */
     flex-grow: 1; /* Ensures the main section expands to fill the remaining space */
-    background-color: #ffffff;
+    background-color: #ebf2fa;
     display: flex;
     flex-direction: column;
     justify-content: space-between; /* Spreads content evenly */
@@ -149,7 +150,7 @@ h2 {
 
 .faq h3 {
     font-size: 1.5em;
-    color: #665599;
+    color: #004e64;
     margin-bottom: 15px; /* Added spacing below each question */
 }
 
@@ -158,96 +159,4 @@ h2 {
     color: #333333;
     line-height: 1.8; /* Improved line spacing */
     text-align: justify; /* Justifies text for cleaner alignment */
-}
-
-/* Payment Section */
-.payment-section {
-    flex-grow: 1;
-    display: flex;
-    justify-content: space-between;
-    padding: 30px;
-    background-color: #ffffff;
-}
-
-.invoice {
-    width: 50%;
-    padding: 20px;
-    background-color: #f9f9f9;
-    border: 1px solid #e0e0e0;
-    border-radius: 10px;
-}
-
-.item-summary {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    margin-bottom: 20px;
-}
-
-.image-placeholder {
-    width: 100%;
-    height: 150px;
-    background-color: #d3d3d3;
-    border: 1px dashed #b0b0b0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 14px;
-    color: #666;
-}
-
-.payment-details p {
-    font-size: 18px;
-    margin-bottom: 10px;
-}
-
-.payment-details hr {
-    border: none;
-    border-top: 1px solid #ccc;
-    margin: 10px 0;
-}
-
-/* Payment Form */
-.payment-form {
-    width: 40%;
-}
-
-.payment-form h2 {
-    font-size: 20px;
-    color: #333;
-    margin-bottom: 10px;
-}
-
-.payment-form input {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    font-size: 16px;
-}
-
-.expiry-cvv {
-    display: flex;
-    gap: 10px;
-}
-
-.expiry-cvv input {
-    width: calc(50% - 5px);
-}
-
-.buy-button {
-    width: 100%;
-    padding: 10px;
-    background-color: #4caf50;
-    color: #ffffff;
-    border: none;
-    border-radius: 5px;
-    font-size: 18px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.buy-button:hover {
-    background-color: #45a049;
 }

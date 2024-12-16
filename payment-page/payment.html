@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Page</title>
+    <link rel="stylesheet" href="payment.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <h1 class="title">The Giant Property</h1><br><br><br>
+            <nav>
+                <button onclick="navigateTo('../login-page/auth.html')">Account</button>
+            </nav><br>
+            <nav>
+                <button onclick="navigateTo('../index.html')">Home</button>
+            </nav><br>
+            <nav>
+                <button onclick="navigateTo('/setting-page/setting.html')">Setting</button>
+            </nav><br>
+            <nav>
+                <button onclick="navigateTo('payment.html')">Payment</button>
+            </nav><br>
+            <nav>
+                <button onclick="navigateTo('/faqs-page/faq.html')">Faq</button>
+            </nav><br>
+        </aside>
+
+        <!-- Payment Section -->
+        <section class="payment-section"><br>
+            <div class="invoice">
+                <div class="item-summary">
+                    <img src="../assets/1.jpg">
+                    <p>Item Name</p>
+                    <p>Price: $XXXX</p>
+                </div>
+                <div class="payment-details">
+                    <p>Subtotal: $XXXX</p>
+                    <p>Tax: XX%</p>
+                    <hr>
+                    <p><strong>Total: $XXXX</strong></p>
+                </div>
+            </div><br><br><br>
+
+            <div class="payment-form">
+                <form action="#">
+                    <h2>Contact Information</h2>
+                    <input type="email" placeholder="Email" required>
+
+                    <h2>Card Information</h2>
+                    <input type="text" placeholder="Name on card" required>
+                    <input type="text" placeholder="Credit Card Number" required>
+                    <div class="expiry-cvv">
+                        <input type="text" placeholder="MM/YY" required>
+                        <input type="text" placeholder="CVV" required>
+                    </div>
+                    
+                    <button type="submit" class="buy-button">Buy</button>
+                </form>
+            </div>
+        </section>
+    </div>
+    <script src="payment.js"></script>
+</body>
+</html>
