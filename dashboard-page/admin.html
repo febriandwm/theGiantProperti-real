@@ -3,237 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Property Dashboard</title>
-    <style>
-        /* Reset */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body, html {
-            height: 100%;
-            font-family: Arial, sans-serif;
-            margin: 0;
-        }
-
-        .container {
-            display: flex;
-            height: 100vh;
-            background-color: #f5f7fa;
-        }
-
-        /* Sidebar */
-        .sidebar {
-            width: 250px;
-            background-color: #f2f0fc;
-            padding: 20px;
-            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
-        }
-
-        .sidebar .title {
-            color: #2f4858;
-            font-size: 1.5em;
-            margin-bottom: 20px;
-            text-align: center;
-        }
-
-        .sidebar nav {
-            margin-bottom: 15px;
-        }
-
-        .sidebar button {
-            width: 100%;
-            height: 40px;
-            background-color: #ffffff;
-            color: #665599;
-            font-size: 16px;
-            border: none;
-            border-radius: 10px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-
-        .sidebar button:hover {
-            background-color: #c19ee0;
-        }
-
-        .sidebar button:active {
-            background-color: #dec9e9;
-            transform: scale(0.98);
-        }
-
-        /* Main Content */
-        .main-content {
-            flex: 1;
-            padding: 20px;
-            overflow-y: auto;
-        }
-
-        .main-header {
-            font-size: 1.8em;
-            color: #2f4858;
-            margin-bottom: 20px;
-            text-align: center;
-        }
-
-        .dashboard-cards {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 20px;
-            margin-bottom: 40px;
-        }
-
-        .card {
-            background-color: #ffffff;
-            border-radius: 10px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-            text-align: center;
-            width: 250px;
-        }
-
-        .card h2 {
-            font-size: 2em;
-            color: #665599;
-            margin-bottom: 10px;
-        }
-
-        .card p {
-            font-size: 1em;
-            color: #2f4858;
-        }
-
-        /* Property Grid */
-        .properties-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            padding: 20px;
-        }
-
-        .property-card {
-            background-color: #ffffff;
-            border-radius: 10px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
-            text-align: center;
-        }
-
-        .property-card img {
-            width: 100%;
-            height: 150px;
-            object-fit: cover;
-        }
-
-        .property-card p {
-            font-size: 1.2em;
-            color: #2f4858;
-            margin: 10px 0;
-        }
-
-        .property-button {
-            background-color: #665599;
-            color: #ffffff;
-            border: none;
-            border-radius: 5px;
-            padding: 10px 15px;
-            margin-bottom: 10px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-
-        .property-button:hover {
-            background-color: #4e3d73;
-        }
-    </style>
+    <title>Admin Dashboard - Add Product</title>
+    <link rel="stylesheet" href="admin.css">
 </head>
 <body>
-    <div class="container">
-        <!-- Sidebar -->
+    <!-- Sidebar -->
+    <div class="sidebar">
         <aside class="sidebar">
-            <h1 class="title">The Giant Property</h1>
+            <h1 class="title">The Giant Property</h1><br><br><br>
             <nav>
-                <button onclick="navigateTo('../login-page/auth.html')">Account</button>
+                <button onclick="navigateTo('login-page/auth.html')">Account</button>
             </nav>
-            <nav>
-                <button onclick="navigateTo('../index.html')">Home</button>
+            <nav><br>
+                <button onclick="navigateTo('index.html')">Home</button>
             </nav>
-            <nav>
-                <button onclick="navigateTo('/setting-page/setting.html')">Setting</button>
+            <nav><br>
+                <button onclick="navigateTo('setting-page/setting.html')">Setting</button>
             </nav>
-            <nav>
-                <button onclick="navigateTo('payment.html')">Payment</button>
+            <nav><br>
+                <button onclick="navigateTo('payment-page/payment.html')">Add Property</button>
             </nav>
-            <nav>
-                <button onclick="navigateTo('/faqs-page/faq.html')">FAQ</button>
+            <nav><br>
+                <button onclick="navigateTo('faqs-page/faq.html')">FAQ</button>
             </nav>
         </aside>
+    </div>
 
-        <!-- Main Content -->
-        <main class="main-content">
-            <header class="main-header">Welcome to Admin Dashboard</header>
+    <!-- Main Content -->
+    <div class="main-content">
+        <header>
+            <h1>Add Some Property</h1>
+        </header>
+        <div class="product-form">
+            <h2>Add Property</h2>
+            <form id="product-form">
+                <label for="product-image">Product Image</label>
+                <input type="file" id="product-image" name="product-image" accept="image/*" required>
 
-            <section class="dashboard-cards">
-                <div class="card">
-                    <h2>120</h2>
-                    <p>Properties Listed</p>
-                </div>
-                <div class="card">
-                    <h2>75</h2>
-                    <p>Active Tenants</p>
-                </div>
-                <div class="card">
-                    <h2>50</h2>
-                    <p>Pending Payments</p>
-                </div>
-                <div class="card">
-                    <h2>30</h2>
-                    <p>New Applications</p>
-                </div>
-            </section>
+                <label for="product-name">Product Name</label>
+                <input type="text" id="product-name" name="product-name" placeholder="Enter product name" required>
 
-            <section class="properties-grid">
-                <div class="property-card">
-                    <img src="../assets/1.jpg" alt="Property">
-                    <p>2.000.000.000</p>
-                    <button class="property-button">Edit</button>
-                </div>
-                <div class="property-card">
-                    <img src="../assets/2.jpg" alt="Property">
-                    <p>400.000.000</p>
-                    <button class="property-button">Edit</button>
-                </div>
-                <div class="property-card">
-                    <img src="../assets/3.jpg" alt="Property">
-                    <p>670.000.000</p>
-                    <button class="property-button">Edit</button>
-                </div>
-                <div class="property-card">
-                    <img src="../assets/4.jpg" alt="Property">
-                    <p>780.000.000</p>
-                    <button class="property-button">Edit</button>
-                </div>
-                <div class="property-card">
-                    <img src="../assets/5.jpg" alt="Property">
-                    <p>1.000.000.000</p>
-                    <button class="property-button">Edit</button>
-                </div>
-                <div class="property-card">
-                    <img src="../assets/6.jpg" alt="Property">
-                    <p>570.000.000</p>
-                    <button class="property-button">Edit</button>
-                </div>
-            </section>
-        </main>
+                <label for="product-price">Price</label>
+                <input type="number" id="product-price" name="product-price" placeholder="Enter product price" required>
+
+                <label for="product-description">Description</label>
+                <textarea id="product-description" name="product-description" rows="5" placeholder="Enter product description"></textarea>
+
+                <button type="submit">Add Product</button>
+                <div class="success-message" id="success-message">Product added successfully!</div>
+            </form>
+        </div>
     </div>
 
     <script>
-        function navigateTo(url) {
-            window.location.href = url;
-        }
+        const productForm = document.getElementById('product-form');
+                const successMessage = document.getElementById('success-message');
+
+productForm.addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    const productName = document.getElementById('product-name').value;
+    const productPrice = document.getElementById('product-price').value;
+    const productDescription = document.getElementById('product-description').value;
+    const productImage = document.getElementById('product-image').files[0];
+
+    if (productName && productPrice && productDescription && productImage) {
+        console.log("Product Details:", {
+            name: productName,
+            price: productPrice,
+            description: productDescription,
+            image: productImage.name
+        });
+
+        successMessage.style.display = 'block';
+        productForm.reset();
+
+        setTimeout(() => {
+            successMessage.style.display = 'none';
+        }, 3000);
+    } else {
+        alert('Please fill in all the fields!');
+    }
+});
     </script>
 </body>
 </html>
